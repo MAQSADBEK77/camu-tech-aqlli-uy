@@ -176,7 +176,7 @@ function Dashboard() {
               title="Xona harorati"
               subtitle={TemperaturaHolati(dataa[oxirgiIndex].temperatura)}
               progress="1"
-              increase={dataa[oxirgiIndex].temperatura + "°C"}
+              increase={dataa[oxirgiIndex].temperatura}
               icon={
                 <ThermostatIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
