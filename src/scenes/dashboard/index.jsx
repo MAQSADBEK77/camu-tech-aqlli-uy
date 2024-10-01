@@ -246,9 +246,8 @@ function Dashboard() {
             justifyContent="center">
             <StatBox
               title="Yoritilganlik"
-              subtitle={ChangHolati(dataa[oxirgiIndex].dust1)}
               progress="0.80"
-              increase={dataa[oxirgiIndex].dust1}
+              increase={dataa[oxirgiIndex].lux}
               icon={
                 <Brightness6Icon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
