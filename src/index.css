@@ -1,0 +1,60 @@
+/* Font Family Import */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* Global Style */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-track:hover {
+  background: #555;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-grid;
+  padding: 5px;
+  background: #fff;
+  filter: blur(4px) contrast(12);
+}
+.loader:before {
+  content: "";
+  height: 40px;
+  aspect-ratio: 3;
+  --c: #0000 64%, #000 66% 98%, #0000 101%;
+  background: radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 10%, #0000 0 20%);
+  animation: l12 0.8s infinite linear;
+}
+@keyframes l12 {
+  to {
+    background-position: -200% 0, -100% 100%;
+  }
+}
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
